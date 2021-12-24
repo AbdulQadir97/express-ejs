@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
@@ -10,6 +10,7 @@ app.get('/form', (req, res) => {
     res.render('pages/form');
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT 
+    || 3000, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
