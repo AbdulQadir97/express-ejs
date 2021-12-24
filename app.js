@@ -6,6 +6,9 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render('pages/index');
 })
+app.get('/form', (req, res) => {
+    res.render('pages/form');
+})
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
